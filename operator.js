@@ -35,5 +35,29 @@ console.log(ij);
 
 
 
+//comparision operator
+//loosely equal type
+
+let bulp = "20"; // string 20 convert a number 20 
+let itel = 20;
+let ib = bulp==itel; //
+console.log(ib);
+
+// not equal type
+let a1 = "22";
+let a2 = 20;
+let ab2 = a1!=a2; //true
+console.log(ab2);
+
+//strict equal type
+
+let ac1 = 20;
+let ac2 = 20;
+let acc= ac1===ac2; //true
+console.log(acc);
+
+
+// note operator are clear
+
 
 
