@@ -76,12 +76,15 @@ let cond4= xy<yx //true
 console.log(cond3 || cond4);
 
 
-//Not opearator
+//Not operator
 let xys= 16;
 let yxs= 20;
 let cond33= xy==yx; //false
 let cond43= xys>yxs //true
 console.log(!(cond43));
+
+//ternary opetor
+
 
 
 
