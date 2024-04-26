@@ -84,7 +84,9 @@ let cond43= xys>yxs //true
 console.log(!(cond43));
 
 //ternary opetor
-
+let fb = 10 < 15 ? "true" : "false";
+console.log(fb);
+// when we neeed 1 line condition then we use ternary operator
 
 
 
