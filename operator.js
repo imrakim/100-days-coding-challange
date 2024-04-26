@@ -57,7 +57,34 @@ let acc= ac1===ac2; //true
 console.log(acc);
 
 
-// note operator are clear
+// just need logical operator
+
+// and operator
+
+let x= 16;
+let y= 20;
+let cond1= x!=y; //true
+let cond2= x>y //true
+console.log(cond1 && cond2);
+
+//OR operator
+
+let xy= 16;
+let yx= 20;
+let cond3= xy==yx; //false
+let cond4= xy<yx //true
+console.log(cond3 || cond4);
+
+
+//Not opearator
+let xys= 16;
+let yxs= 20;
+let cond33= xy==yx; //false
+let cond43= xys>yxs //true
+console.log(!(cond43));
+
+
+
 
 
 
