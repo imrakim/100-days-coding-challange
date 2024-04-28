@@ -42,3 +42,10 @@ else{
     colormode='green'
 }
 console.log(colormode);
+
+
+
+// ternary operator
+let myAge=20;
+let result = myAge>=18? 'adult':'not adult';
+console.log(result);
