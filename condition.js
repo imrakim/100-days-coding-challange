@@ -12,10 +12,11 @@ let mode = "dark";
 let color;
 
 if (mode === "dark") {
-  color ="black";
+  color = "black";
+} else {
+  color = "white";
 }
-if (mode === "light") {
-  color ="white";
-}
+
+
 
 console.log(color);
