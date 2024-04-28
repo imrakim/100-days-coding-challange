@@ -16,7 +16,29 @@ if (mode === "dark") {
 } else {
   color = "white";
 }
-
-
-
 console.log(color);
+
+let num = 7;
+if (num % 2 === 0) {
+  console.log(num,'is even');
+}
+else{
+    console.log(num,'is odd');
+}
+
+
+let colormode= 'blue';
+
+if(colormode==='black'){
+    console.log('show color is black');
+}
+else if(colormode==='light'){
+    console.log('show color is whte');
+}
+else if(colormode==='blue'){
+    console.log('show color is blue');
+}
+else{
+    colormode='green'
+}
+console.log(colormode);
