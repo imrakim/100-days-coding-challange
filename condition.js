@@ -49,3 +49,16 @@ console.log(colormode);
 let myAge=20;
 let result = myAge>=18? 'adult':'not adult';
 console.log(result);
+
+let input= prompt("hello value");
+if(input % 5 === 0){
+    console.log(input,'number is multiple of 5');
+}
+else{
+    console.log(input,'number is not multiple of 5');
+}
+
+
+let score = 95;
+let grade;
+
