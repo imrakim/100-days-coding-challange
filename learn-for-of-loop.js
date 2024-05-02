@@ -54,3 +54,6 @@ let WordPress = [
   for (const satroligue of nadimboss) {  
     console.log(satroligue);
   }
+
+
+  //array in js 
