@@ -40,22 +40,12 @@ const countries = [
     name: "India",
     cncode: "In",
   },
-  {
-    reagion: "Asia",
-    name: "Canada",
-    cncode: "ca",
-  },
-  {
-    reagion: "Asia",
-    name: "America",
-    cncode: "us",
-  },
 ];
 let tableHead = `<tr><th>Country Name</th><th>Region</th><th>Country Code</th></tr>`
 for (const country of countries) {
   myTable +=
     "<tr><td>" +
-    country.name +
+     country.name +
     "</td><td>" +
     country.reagion +
     "</td><td>" +

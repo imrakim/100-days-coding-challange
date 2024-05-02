@@ -1,5 +1,5 @@
-let aSampleString = "<li></li>";
-let tdString = "";
+let aSampleString = "";
+let myTable = "";
 
 const countries = [
   {
@@ -12,19 +12,14 @@ const countries = [
   },
 ];
 
+
 // for (const country of countries) {
-//   aSampleString += "<li>Hiiiiii !!!</li>";
+//   aSampleString += `<li> ${country.name}</li>`;
 // }
-
 for (const country of countries) {
-  // aSampleString += "<li>${country.name}</li>";
-  aSampleString += "<li>" + country.name + "</li>";
-}
-
-for (const country of countries) {
-  aSampleString += "<li>" + country.name + "</li>";
-  // tdString += `<tr><td> ${country.name} </td><td> ${country.code} </td></tr>`;
+  myTable += `<tr><td> ${country.name}</td></tr>`
 }
 
 document.getElementById("myContainer").innerHTML = aSampleString;
-document.getElementById("myTable").innerHTML = tdString;
+document.getElementById("myTable").innerHTML = myTable;
+
