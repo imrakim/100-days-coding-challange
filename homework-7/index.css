@@ -1,0 +1,26 @@
+/* decendent example  */
+div p {
+  border: 2pc solid greenyellow;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* child example */
+
+div > span {
+  background-color: yellow;
+}
+
+
+/* child example */
+ul.my-things li {
+  margin: 2em;
+}
+
+li {
+  list-style-type: disc;
+}
+
+li li {
+  list-style-type: circle;
+}
