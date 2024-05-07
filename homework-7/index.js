@@ -1,11 +1,8 @@
-
-// let body = "";
-
 const countries = [
   {
     reagion: "Asia",
     name: "Bangladesh",
-    cncode: "Bd"
+    cncode: "Bd",
   },
   {
     reagion: "Asia",
@@ -17,22 +14,31 @@ const countries = [
     name: "Srilanka",
     cncode: "Sl",
   },
+  {
+    reagion: "Asia",
+    name: "Afganistan",
+    cncode: "AF",
+  },
+  {
+    reagion: "Asia",
+    name: "Chaina",
+    cncode: "CH",
+  },
 ];
-let showCountry = ''
+let showingTable = "";
 for (const country of countries) {
-  showCountry += `<tr>
+  showingTable += `<tr>
   <td>${country.reagion}</td>
   <td>${country.name}</td>
   <td>${country.cncode}</td>
 </tr>`;
-
 }
 // Function defination
 
 function loadData() {
   // document.getElementById("myTable").innerHTML=`<tr>${head}</tr> <tr>${body}</tr>`;
   const tbodyOfTable2 = document.querySelector("#myTable2 tbody");
-  tbodyOfTable2.innerHTML = showCountry;
+  tbodyOfTable2.innerHTML = showingTable;
 }
 
 // Function Call
