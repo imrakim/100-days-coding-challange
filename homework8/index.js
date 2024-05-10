@@ -3,7 +3,7 @@
 
 function getIP(){
     let ip = document.getElementById("ipaddress").value;
-    let url = //api.ipgeolocation.io/ipgeo?ip=${ip}&apiKey=a25ad4b491824dd28d0ecf74b70838fa;
+    let url = `api.ipgeolocation.io/ipgeo?ip=${ip}&apiKey=a25ad4b491824dd28d0ecf74b70838fa`;
     
     fetch (url)
     .then(response => response.json())
