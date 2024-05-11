@@ -5,8 +5,8 @@ let weatherUrl =
 fetch(weatherUrl)
   .then((x) => x.json())
   .then((x) => {
-    for (const y of hourly) { // Assuming you want to iterate over the hourly forecast
-      list += `<p>${y.hourly}</p>`;
+    for (const y of x) { // Assuming you want to iterate over the hourly forecast
+      list += `<div>${y.}</div>`;
     //   list += `<p>${y.relative_humidity_2m}</p>`;
     //   list += `<p>${y.wind_speed_10m}</p>`;
     }
