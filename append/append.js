@@ -54,21 +54,17 @@ let columnTextNodes = getTextNodeFromText(columnTexts);
 
 console.log(columnTextNodes);
 
-columnTexts.forEach(element => {
-    console.log(element);
-});
+function getTdNodesFromTextNodes(arrayOfTextNodes2) {
+  let arrayOfTdNodes = [];
+  let td = "";
+  for (let i = 0; i < arrayOfTextNodes2.length; i++) {
+    td = document.createElement("td");
+    // arrayOfTdNodes[i] = td.appendChild(arrayOfTextNodes2[i]);
+    arrayOfTdNodes.push(td.appendChild(arrayOfTextNodes2[i]));
+  }
+  return arrayOfTdNodes;
+}
 
-// function getTdNodesFromTextNodes(arrayOfTextNodes2) {
-//     let arrayOfTdNodes = [];
-//     let td = "";
-//     for (let i = 0; i < arrayOfTextNodes2.length; i++) {
-//         td = document.createElement("td");
-//         // arrayOfTdNodes[i] = td.appendChild(arrayOfTextNodes2[i]);
-//         arrayOfTdNodes.push(td.appendChild(arrayOfTextNodes2[i]));
-//     }
-//     return arrayOfTdNodes;
-// }
+let columnOfTdNodes = getTdNodesFromTextNodes(columnTextNodes);
 
-// let columnOfTdNodes = getTdNodesFromTextNodes(columnTextNodes);
-
-// console.log(columnOfTdNodes);
+console.log(columnOfTdNodes);
