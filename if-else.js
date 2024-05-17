@@ -10,3 +10,10 @@ if (emilregestration === emil) {
 let apple = "Apple";
 let orange = "Orange";
 console.log("Apple" != "Orange"); //  not equal
+
+
+
+let number ='7';
+let string = '7';
+
+console.log(number !== string);  // Output: false
