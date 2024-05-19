@@ -6,7 +6,7 @@ const registerEmail = "rakimali770@gmail.com";
 
 
 
-if(loginPassword === registerPassword && loginEmail === registerEmail) {
+if(loginPassword === registerPassword || loginEmail === registerEmail) {
   console.log('Login success');
 }
 else{
