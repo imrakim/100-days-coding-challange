@@ -36,3 +36,10 @@ if (marks >= 80 && marks <= 100) {
 } else {
   console.log("wrong input");
 }
+
+
+
+let rakim = 45;
+let rafi = 40;
+
+rakim >= rafi ? console.log(" equal"): console.log("not Equal");
