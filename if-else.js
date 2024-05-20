@@ -37,9 +37,16 @@ if (marks >= 80 && marks <= 100) {
   console.log("wrong input");
 }
 
-
-
 let rakim = 45;
 let rafi = 40;
 
-rakim >= rafi ? console.log(" equal"): console.log("not Equal");
+rakim <= rafi ? console.log(" equal") : console.log("not Equal");
+
+// for (let i = 1; i <= 5; i++) {
+//   console.log("hello js");
+// }
+
+let sum = 0;
+for (let i = 1; i <= 5; i++) {
+ console.log( sum = sum + i);
+}
