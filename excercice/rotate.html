@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="result"></p>
+
+
+
+    <script>
+            let firstLength = parseInt(prompt('Enter the first of a triangle: '));
+            let secondLenght =parseInt(prompt('Enter the second of a triangle: '));
+            let thirdLenght = parseInt(prompt('Enter the third of a triangle: '));
+            let Perimeter = (firstLength + secondLenght + thirdLenght);
+            const halfPerimeter = Perimeter/2;
+            let areas = Math.sqrt(halfPerimeter * ((halfPerimeter - firstLength) * (halfPerimeter - secondLenght) * (halfPerimeter - thirdLenght)));
+            document.getElementById('result').innerHTML = areas;
+
+    </script>
+</body>
+
+</html>
