@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let year = 2014; year <= 2050; year++) {
+            let d = new Date(year, 0, 1);
+
+            if (d.getDay() === 0) {
+                console.log("1st January will be a Sunday" + year);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

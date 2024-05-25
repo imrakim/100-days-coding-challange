@@ -9,20 +9,20 @@
 
 <body>
 
-<div id="leapyear">
-    
-</div>
 
 
 
 
     <script>
-        function leapyear(year) {
-            return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
-
+        let ra = Math.ceil(Math.random() * 10);
+        let rakim = prompt("enter numeric number");
+        if(ra == rakim){
+            console.log("Matched");
         }
-        let year = leapyear(2008);
-        document.getElementById('leapyear').innerHTML=year;
+        else{
+            console.log("not matched--"+rakim);
+        }
+
     </script>
 </body>
 
