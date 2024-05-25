@@ -17,14 +17,12 @@
 
 
     <script>
-        function leapyear(year) {
+        function leapyear(year,years,yearss) {
             return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+
         }
-        console.log(leapyear(2020)); 
-        console.log(leapyear(2002)); 
-        console.log(leapyear(1700)); 
-        console.log(leapyear(1800)); 
-        console.log(leapyear(100));
+        let year = leapyear(2008);
+        document.getElementById('leapyear').innerHTML=year;
     </script>
 </body>
 
