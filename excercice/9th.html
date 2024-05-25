@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let today = new Date();
+        let christmas = today.getFullYear();
+        if (today.getMonth() == 11 && today.getDate() > 25) {
+            christmas += 1
+        }
+        let christmasNewDate = new Date(christmas, 11, 25);
+        let dailyMilisecond = 1000 * 60 * 60 * 24;
+        let remainingDay = Math.floor((christmasNewDate.getTime() - today.getTime()) / (dailyMilisecond));
+        console.log(remainingDay);
+    </script>
+</body>
+
+</html>
