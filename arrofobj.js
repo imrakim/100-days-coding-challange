@@ -21,8 +21,16 @@ let obj = [
         name: "Ratul",
         age : 23,
         class: 10,
-        "school name": "Sirajuddin Sarker viddyniketan and collage"
+        "school name": "Sirajuddin Sarker viddyniketan and collage",
+        list:[
+            {
+                name: 'rakim',
+                roll: 12,
+                class:11,
+                "collage name":'Uttara High School and college'
+            }
+        ]
     }
 ];
 
-console.log(Object.values(obj[0]));
+console.log(obj[3].list[0].name);
