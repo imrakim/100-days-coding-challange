@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <label for="">input</label>
+    <label for="">1st Number</label>
     <input type="text" id="one">
     <br>
     <br>
-    <label for="">input</label>
+    <label for="">2nd Number</label>
     <input type="text" id="two">
+    <br>
+    <br>
+    <button onclick="multiplay().value">Multiplay</button>
 
+    <button onclick="divideby().value">Divide</button>
+
+    <p>Result:</p>
+    <span id="result"></span>
 
 
     <script>
-           
+        function multiplay() {
+            let num1 = document.getElementById('one').value;
+            let num2 = document.getElementById('two').value;
+            document.getElementById('result').innerHTML = num1 * num2;
+        }
+        function divideby() {
+            let num1 = document.getElementById('one').value;
+            let num2 = document.getElementById('two').value;
+            document.getElementById('result').innerHTML = num1 / num2;
+        }
+
     </script>
 </body>
+
 </html>

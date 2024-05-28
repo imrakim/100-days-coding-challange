@@ -102,18 +102,10 @@ let newProduct = [
     price: "1200 BDT",
   },
 ];
-
-let mobileId = "product5";
+let mobileId = "product0";
 for (let i = 0; i < newProduct.length; i++) {
   let products = newProduct[i];
   if (products.id === mobileId) {
     console.log(products);
   }
 }
-// let mobileId = "product5";
-// for (let i = 0; i < newProduct.length; i++) {
-//   let products = newProduct[i];
-//   if (products.id === mobileId) {
-//     console.log(products);
-//   }
-// }
