@@ -3,25 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vanilla JS Alert</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+#alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: relative;
+    animation: fadeIn 0.5s;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+    </style>
 </head>
 <body>
-    <h1 id="upper"></h1>
-
-    <script>
-let upperCase = 'Im Rakim';
-let text = upperCase.toLowerCase();
-document.getElementById('upper').innerHTML=text;
-
-
-
-// let arr = ['rakim','ratul','rafi','rahim'];
-// arr.shift();
-// console.log(arr);
-let num = '2';
-let nam = parseInt(num);
-console.log( nam);
-
-    </script>
+    <div id="alert-container">
+        <div class="alert alert-success">
+            This is a success alert!
+            <button class="close">&times;</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
