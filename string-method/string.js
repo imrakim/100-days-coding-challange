@@ -19,3 +19,10 @@ console.log(star);
 let num = "7";
 let formattedNum = num.padStart(2, '0'); // "007"  there nothing i understand.
 console.log(formattedNum);
+
+
+
+// string search 
+let text = " hlw My  is Rakim"
+let result = text.indexOf("name");
+console.log(result);
