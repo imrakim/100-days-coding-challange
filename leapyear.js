@@ -2,7 +2,14 @@ function isLeap(year) {
   if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
     return "its Leap Year";
   } else {
-    ("AThis Is Not Leap Year");
+    ("no leap year");
   }
 }
-console.log(isLeap(2020));
+console.log(isLeap(1970));
+
+var multi = 1;
+
+for(let i = 1; i<=5; i++){
+multi= multi*i;
+console.log(multi);
+}
