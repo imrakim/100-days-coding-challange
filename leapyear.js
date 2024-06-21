@@ -11,10 +11,15 @@ console.log(isLeap(1970));
 // multi= multi*i;
 // console.log(multi);
 // }
-var multi = 1;
-var i = 1;
-while (i <= 10) {
-  multi = multi * i;
-  console.log(multi);
-  i++;
+
+function check(n) {
+  var i = 1;
+  var check = 1;
+  while (i <= n) {
+    check = check * i;
+    i++;
+  }
+  return check;
 }
+let result = check(10);
+console.log(result);
