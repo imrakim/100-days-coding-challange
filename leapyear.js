@@ -23,3 +23,14 @@ function check(n) {
 }
 let result = check(10);
 console.log(result);
+
+let backTik = `What's "Your" Name ?`; // using bacaktik - backtik similar to quations. But you can Do SomeThing Boom, inside bacaktik you can use single qatt and double qatt. -----  backtik allow both single quotes and  double
+console.log(backTik);
+
+function interpolite() {
+  let price = 10;
+  let vat = 1;
+  let total = `Tottal:${(price*(vat+1).toFixed(2))}`;
+  return total;
+}
+console.log(interpolite());
