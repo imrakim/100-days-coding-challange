@@ -7,9 +7,14 @@ function isLeap(year) {
 }
 console.log(isLeap(1970));
 
+// for(let i = 1; i<=5; i++){
+// multi= multi*i;
+// console.log(multi);
+// }
 var multi = 1;
-
-for(let i = 1; i<=5; i++){
-multi= multi*i;
-console.log(multi);
+var i = 1;
+while (i <= 10) {
+  multi = multi * i;
+  console.log(multi);
+  i++;
 }
