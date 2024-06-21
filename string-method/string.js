@@ -22,7 +22,12 @@ console.log(formattedNum);
 
 
 
-// string search 
+// string search  indexOf
 let text = " hlw My  is Rakim"
 let result = text.indexOf("name");
 console.log(result);
+
+// lastindexOf
+let last = " hlw how's going Your Day Day Day";
+let show =  last.lastIndexOf("Day");
+console.log(show);
