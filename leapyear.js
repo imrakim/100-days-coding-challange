@@ -30,7 +30,14 @@ console.log(backTik);
 function interpolite() {
   let price = 10;
   let vat = 1;
-  let total = `Tottal:${(price*(vat+1).toFixed(2))}`;
+  let total = `Tottal:${price * (vat + 1).toFixed(2)}`;
   return total;
 }
 console.log(interpolite());
+
+
+
+
+let x = "12";
+let xi = x.toString();
+console.log(xi);
