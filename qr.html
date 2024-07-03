@@ -1,70 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Code Reader</title>
-  <style>
-    #video {
-    
-      width: 50%;
-      height: auto;
-    }
-    #canvas {
-      display: none;
-      margin: 0 auto;
-    }
-  </style>
-</head>
-<body>
-  <h1>QR Code Reader</h1>
-  <video id="video" autoplay></video>
-  <canvas id="canvas"></canvas>
-  <script src="path/to/jsQR.js"></script>
-  <script>
-    const video = document.getElementById('video');
-const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <ul id="container"></ul>
+    </div>
 
-// Access the device camera and stream to video element
-navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
-  .then(function(stream) {
-    video.srcObject = stream;
-    video.setAttribute('playsinline', true); // required to tell iOS safari we don't want fullscreen
-    video.play();
-    requestAnimationFrame(tick);
-  });
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      let ul = document.getElementById("container");
+      let url = "https://gist.githubusercontent.com/keeguon/2310008/raw/";
 
-function tick() {
-  if (video.readyState === video.HAVE_ENOUGH_DATA) {
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    context.drawImage(video, 0, 0, canvas.width, canvas.height);
-    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-    const code = jsQR(imageData.data, imageData.width, imageData.height, {
-      inversionAttempts: "dontInvert",
-    });
-
-    if (code) {
-      drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
-      drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
-      drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
-      drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
-      alert("QR Code detected: " + code.data);
-    }
-  }
-  requestAnimationFrame(tick);
-}
-
-function drawLine(begin, end, color) {
-  context.beginPath();
-  context.moveTo(begin.x, begin.y);
-  context.lineTo(end.x, end.y);
-  context.lineWidth = 4;
-  context.strokeStyle = color;
-  context.stroke();
-}
-
-  </script>
-</body>
+      axios
+      .get(url)
+      .then(function (response) {
+        // handle success
+        console.log(response.data);
+        
+        // Assuming the data is an array of items
+        let data = response.data.split('\n'); // Split by new line if data is a string with multiple lines
+        
+        data.forEach(item => {
+          let li = document.createElement('li');
+          li.textContent = item;
+          ul.appendChild(li);
+        });
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
+    </script>
+  </body>
 </html>
