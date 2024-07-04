@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div>
-      <ul id="container"></ul>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country List</title>
+</head>
+<body>
+  
+<div id="main"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-      let ul = document.getElementById("container");
-      let url = "https://gist.githubusercontent.com/keeguon/2310008/raw/";
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  let url = 'https://gist.githubusercontent.com/keeguon/2310008/raw/';
 
-      axios
-      .get(url)
-      .then(function (response) {
-        // handle success
-        console.log(response.data);
-        
-        // Assuming the data is an array of items
-        let data = response.data.split('\n'); // Split by new line if data is a string with multiple lines
-        
-        data.forEach(item => {
-          let li = document.createElement('li');
-          li.textContent = item;
-          ul.appendChild(li);
-        });
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-      });
-    </script>
-  </body>
+  axios.get(url)
+    .then(function (response) {
+      // handle success
+      const countries = response.data;
+      const mainDiv = document.getElementById('main');
+      const ul = document.createElement('ul');
+
+      // Assuming countries is an array of objects with "name" as a property
+      for (const country of countries) {
+        const li = document.createElement('li');
+        li.textContent = country.name;
+        ul.appendChild(li);
+      }
+
+      mainDiv.appendChild(ul);
+    })
+    .catch(function (error) {
+      // handle error
+      console.error(error);
+    })
+    .finally(function () {
+      // always executed
+    });
+</script>
+</body>
 </html>
