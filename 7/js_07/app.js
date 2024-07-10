@@ -25,7 +25,7 @@ function myFunction(event) {
 var cal = document.getElementById("calcu");
 cal.onkeyup = function (event) {
   if (event.keyCode === 13) {
-    console.log("Enter");
+    // console.log("Enter");
     let x = document.getElementById("result").value;
     console.log(x);
     solve();
@@ -36,7 +36,12 @@ function solve() {
   let x = document.getElementById("result").value;
   let y = math.evaluate(x);
   document.getElementById("result").value = y;
-  
+}
+
+function removeCharacter() {
+  let x = document.getElementById("result").value;
+  x = x.slice(0, -1);
+  document.getElementById("result").value = x;
 }
 
 // Function that clear the display
