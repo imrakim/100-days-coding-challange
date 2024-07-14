@@ -76,14 +76,14 @@ ul {
 }
 
 .slider ul {
-	position: absolute;
-}
-
-.slider li {
-	float: left;
-	line-height: 0;
-	text-align: center;
-}
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slider li {
+    margin: 0;
+    padding: 0;
+  }
 
 .slider li img {
 	width: 100%;
@@ -96,23 +96,7 @@ ul {
 	text-align: center;
 }
 
-.navigator span {
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	border-radius: 3px;
-	background: #606161;
-	margin: 0 4px;
-	transition: 0.1s;
-	position: relative;
-	top: 0;
-}
 
-.navigator span.active {
-	background: orange;
-	width: 10px;
-	height: 10px;
-}
 
 .slider > span {
 	position: absolute;

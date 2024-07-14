@@ -21,7 +21,11 @@ $(function(){
 	$('.slider ul').css('width', ulWidth + '%');
 	$('.slider li').css('width', liWidth + '%');
 
-	
+	$('.slider').append(function() {
+		$(this).append('<div class="navigator"></div>');
+
+		
+	});
 
   $('.slider').css('height', $('.slider li img').height());
   
@@ -29,8 +33,7 @@ $(function(){
 
 
 	if(liCount > 2) {
-		$('.slider ul').css('margin-left', -leftIncrement + '%');
-		$('.slider ul li:last-child').prependTo('.slider ul');
+		
 	} else if(liCount == 1) {
 		$('.slider span').css('display', 'none');
 		$('.autoPlay').css('display', 'none');
@@ -84,7 +87,7 @@ $(function(){
   if(liCount > 1) {
 		invertalValue = setInterval(function() {
 			moveLeft();
-		}, 5000);
+		}, 6000);
 	}
 
 	$('.prev').click(function(){
